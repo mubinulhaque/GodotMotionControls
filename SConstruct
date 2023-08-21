@@ -4,6 +4,10 @@ libname = "libgdmotioncontrols"
 
 env = SConscript("godot-cpp/SConstruct")
 
+env.Append(LIBPATH=["sdl/lib"])
+env.Append(CPPPATH=["sdl/include"])
+env.Append(LIBS=["SDL2"])
+
 env.Append(CPPPATH=["src/"])
 sources = Glob("src/*.cpp")
 

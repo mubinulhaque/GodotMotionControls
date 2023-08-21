@@ -11,6 +11,8 @@ class MotionSensor : public Node {
     public:
         MotionSensor();
         ~MotionSensor();
+
+        String has_sensor(const int controller_index);
     
     protected:
         static void _bind_methods();
