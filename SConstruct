@@ -5,10 +5,9 @@ libname = "libgdmotioncontrols"
 env = SConscript("godot-cpp/SConstruct")
 
 env.Append(LIBPATH=["sdl/lib"])
-env.Append(CPPPATH=["sdl/include"])
-env.Append(LIBS=["SDL2"])
+env.Append(LIBS=["mingw32", "SDL2main", "SDL2"])
 
-env.Append(CPPPATH=["src/"])
+env.Append(CPPPATH=["src/", "sdl/include/"])
 sources = Glob("src/*.cpp")
 
 if env["platform"] == "macos":
