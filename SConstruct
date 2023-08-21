@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-libname = "EXTENSION-NAME"
+libname = "libgdmotioncontrols"
 
 env = SConscript("godot-cpp/SConstruct")
 
